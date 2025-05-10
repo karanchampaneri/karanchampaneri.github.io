@@ -1,39 +1,63 @@
-import {RevealOnScroll} from "../RevealOnScroll";
+import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Home = () => {
     return (
         <section
             id="home"
             className="min-h-screen flex items-center justify-center relative"
+            style={{ backgroundColor: "#F0F0EB" }} // Ivory Medium
         >
             <RevealOnScroll>
-            <div className="text-center z-10 px-4">
-                <h1 className="text-5xl md:text-7xl font-bold mb-6 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent leading-right">
-                    Hi, I'm Karan Champaneri
-                </h1>
+                <div className="text-center z-10 px-4">
+                    <h1 className="text-5xl md:text-7xl font-bold mb-6 leading-tight" style={{ color: "#191919" }}>
+                        Hi, I'm <span className="underline decoration-[#CC785C]">Karan Champaneri</span>
+                    </h1>
 
-                <p className="text-gray-400 text-lg mb-8 max-w-lg mx-auto">
-                    I'm a software engineer with a passion for building
-                    innovative solutions. I specialize in full-stack development,
-                    and I'm always eager to learn new technologies and improve my
-                    skills.
-                </p>
-                <div className="flex justify-center space-x-4">
-                    <a href="#projects" 
-                        className="bg-blue-500 text-white px-6 py-3 rounded font-medium transition relative overflow-hidden hover:-translate-y-0.5
-                        hover:shadow-[0_0_0_8px_rgba(59,130,246,0.4)]">
-                        View Projects
-                    </a>
+                    <p className="text-lg mb-8 max-w-lg mx-auto" style={{ color: "#191919" }}>
+                        I'm a software engineer with a passion for building innovative solutions. 
+                        I specialize in full-stack development and am always eager to learn new technologies.
+                    </p>
 
-                    <a href="#contact" 
-                        className="border border-blue-500/50 text-blue-500 px-6 py-3 rounded font-medium transition-all duration-200
-                        hover:-translate-y-0.5
-                        hover:shadow-[0_0_0_8px_rgba(59,130,246,0.2)]
-                        hover:bg-blue-500/10">
-                        Contact Me
-                    </a>
+                    <div className="flex justify-center space-x-4">
+                        <a
+                            href="#projects"
+                            className="px-6 py-3 rounded-lg font-medium transition"
+                            style={{
+                                backgroundColor: "#191919", // Slate Dark
+                                color: "#FFFFFF", // White
+                            }}
+                            onMouseEnter={(e) => {
+                                e.target.style.backgroundColor = "#CC785C"; // Book Cloth
+                                e.target.style.color = "#FFFFFF"; // White
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.backgroundColor = "#191919"; // Slate Dark
+                                e.target.style.color = "#FFFFFF"; // White
+                            }}
+                        >
+                            View Projects
+                        </a>
+
+                        <a
+                            href="#contact"
+                            className="px-6 py-3 rounded-lg font-medium border transition"
+                            style={{
+                                borderColor: "#191919", // Slate Dark
+                                color: "#191919", // Slate Dark
+                            }}
+                            onMouseEnter={(e) => {
+                                e.target.style.backgroundColor = "#CC785C"; // Book Cloth
+                                e.target.style.color = "#FFFFFF"; // White
+                            }}
+                            onMouseLeave={(e) => {
+                                e.target.style.backgroundColor = "transparent";
+                                e.target.style.color = "#191919"; // Slate Dark
+                            }}
+                        >
+                            Contact Me
+                        </a>
+                    </div>
                 </div>
-            </div>
             </RevealOnScroll>
         </section>
     );

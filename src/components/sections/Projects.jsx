@@ -1,68 +1,65 @@
-import {RevealOnScroll} from "../RevealOnScroll";
+import { RevealOnScroll } from "../RevealOnScroll";
 
 export const Projects = () => {
-    return (<section
-        id="projects"
-        className="min-h-screen flex items-center justify-center py-20"
+    const projects = [
+        {
+            title: "Project 1",
+            description:
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro eligendi ipsam velit incidunt totam enim quaerat voluptatem sunt reiciendis.",
+            technologies: ["React", "Node.js", "AWS", "Docker"],
+            link: "#",
+        },
+        {
+            title: "Project 2",
+            description:
+                "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsam exercitationem. Accusamus aperiam suscipit magnam mollitia.",
+            technologies: ["Vue", "Firebase", "TailwindCSS"],
+            link: "#",
+        },
+        // Add more projects as needed
+    ];
+
+    return (
+        <section
+            id="projects"
+            className="min-h-screen flex flex-col justify-center py-20"
+            style={{ backgroundColor: "#F0F0EB" }} // Ivory Medium
         >
             <RevealOnScroll>
-            <div className="max-w-5xl mx-auto px-4">
-                <h2 className="text-3xl font-bold mb-8 bg-gradient-to-r from-blue-500 to-cyan-400 bg-clip-text text-transparent text-center">
-                    Featured Projects
-                </h2>
-
-                <div className = "grid grid-cols-1 md:grid-cols-2 gap-6">
-                    <div className="p-6 rounded-xl border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                        <h3 className="text-xl font-bold mb-2">Project 1</h3>
-                        <p clasName="text-gray-400 mb-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro eligendi ipsam velit incidunt totam enim quaerat voluptatem sunt reiciendis, illo asperiores. Eveniet, ipsam exercitationem. Accusamus aperiam suscipit magnam mollitia.</p>
-                        <div className="flex flex-wrap gap-2 mb-4 mt-4">
-                            {["React", "Node.js", "AWS", "Docker"].map((tech, key) => (
-                                <span 
-                                    key={key}
-                                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
-
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-
-                        <div className="flex justify-between items-center">
-                            <a
-                                href="#" 
-                                className="text-blue-400 hover:text-blue-300 transition-colors my-4"> View Project </a>
-                        </div>
+                <div className="max-w-7xl mx-auto px-12">
+                    {/* Section Title */}
+                    <div className="text-center mb-12">
+                        <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r text-[#CC785C] bg-clip-text">
+                            Featured Projects
+                        </h2>
+                        <p className="text-lg text-gray-600">
+                            A selection of projects showcasing my skills and experience in software development.
+                        </p>
                     </div>
 
-                    {/* Repeat the project card for more projects */
-                    /* You can map through an array of projects to generate these cards dynamically */}
-
-                    <div className="p-6 rounded-xl border-white/10 hover:-translate-y-1 hover:border-blue-500/30 hover:shadow-[0_2px_8px_rgba(59,130,246,0.2)] transition">
-                        <h3 className="text-xl font-bold mb-2">Project 1</h3>
-                        <p clasName="text-gray-400 mb-4"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro eligendi ipsam velit incidunt totam enim quaerat voluptatem sunt reiciendis, illo asperiores. Eveniet, ipsam exercitationem. Accusamus aperiam suscipit magnam mollitia.</p>
-                        <div className="flex flex-wrap gap-2 mb-4 mt-4">
-                            {["React", "Node.js", "AWS", "Docker"].map((tech, key) => (
-                                <span 
-                                    key={key}
-                                    className="bg-blue-500/10 text-blue-500 py-1 px-3 rounded-full text-sm hover:bg-blue-500/20
-                                                hover:shadow-[0_2px_8px_rgba(59,130,246,0.1)] transition-all">
-
-                                    {tech}
-                                </span>
-                            ))}
-                        </div>
-
-                        <div className="flex justify-between items-center">
-                            <a
-                                href="#" 
-                                className="text-blue-400 hover:text-blue-300 transition-colors my-4"> View Project </a>
-                        </div>
+                    {/* Projects Grid */}
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                        {projects.map((project, index) => (
+                            <div
+                                key={index}
+                                className="p-6 rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow"
+                            >
+                                <h4 className="text-sm font-semibold text-gray-500 uppercase mb-2">
+                                    {project.technologies.join(", ")}
+                                </h4>
+                                <h3 className="text-2xl font-bold text-gray-800 mb-4">{project.title}</h3>
+                                <p className="text-gray-600 mb-6">{project.description}</p>
+                                <a
+                                    href={project.link}
+                                    className="inline-block px-6 py-2 text-sm font-medium rounded-md bg-black text-white hover:bg-[#CC785C] hover:text-white transition-colors"
+                                >
+                                    View Project
+                                </a>
+                            </div>
+                        ))}
                     </div>
-
                 </div>
-
-            </div>
             </RevealOnScroll>
-        
-    </section>);
-}
+        </section>
+    );
+};
