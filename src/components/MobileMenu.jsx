@@ -38,6 +38,15 @@ export const MobileMenu = ({ menuOpen, setMenuOpen }) => {
                 <hr className="border-t border-gray-300" />
 
                 <a
+                    href="#testimonials"
+                    onClick={() => setMenuOpen(false)}
+                    className="block text-2xl font-semibold text-[#191919] py-4 w-full hover:bg-[#E5E4DF] transition"
+                >
+                    Testimonials
+                </a>
+                <hr className="border-t border-gray-300" />
+
+                <a
                     href="#projects"
                     onClick={() => setMenuOpen(false)}
                     className="block text-2xl font-semibold text-[#191919] py-4 w-full hover:bg-[#E5E4DF] transition"

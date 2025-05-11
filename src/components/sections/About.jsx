@@ -118,40 +118,55 @@ export const About = () => {
                     <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                         {/* Education */}
                         <div
-                            className="p-6 rounded-xl transition-all"
+                            className="p-6 rounded-lg shadow-md bg-[#FFFFFF] flex flex-col justify-between"
                             style={{
-                                border: "1px solid #CC785C", // Book Cloth
-                                color: "#191919", // Slate Dark
+                                border: "1px solid #E5E5E5", // Light gray border to match the Projects section
                             }}
                         >
-                            <h3 className="text-xl font-bold mb-4">Education</h3>
-                            <ul className="list-disc list-inside space-y-2">
-                                <li>
-                                    <strong>BASc in Computer Engineering</strong> - University of Waterloo (2021 - 2026)
-                                </li>
-                                <li>
+                            <h3 className="text-sm font-bold uppercase mb-2" style={{ color: "#191919" }}>
+                                Education
+                            </h3>
+                            <div>
+                                <h4 className="text-lg font-bold mb-2" style={{ color: "#191919" }}>
+                                    BASc in Computer Engineering
+                                </h4>
+                                <p className="text-sm text-gray-600 mb-4">
+                                    University of Waterloo (2021 - 2026)
+                                </p>
+                                <p className="text-sm text-gray-600">
                                     Relevant Coursework: Data Structures and Algorithms, Software Design and Architecture, Computer Networks, Database Systems
-                                </li>
-                            </ul>
+                                </p>
+                            </div>
                         </div>
 
                         {/* Work Experience */}
                         <div
-                            className="p-6 rounded-xl transition-all"
+                            className="p-6 rounded-lg shadow-md bg-[#FFFFFF] flex flex-col justify-between"
                             style={{
-                                border: "1px solid #CC785C", // Book Cloth
-                                color: "#191919", // Slate Dark
+                                border: "1px solid #E5E5E5", // Light gray border to match the Projects section
                             }}
                         >
-                            <h3 className="text-xl font-bold mb-4">Work Experience</h3>
-                            <div className="space-y-4">
-                                <div>
-                                    <h4 className="font-semibold">Software Developer at XYZ Company (2022 - Present)</h4>
-                                    <p>- Developed and maintained web applications using React and Node.js.</p>
+                            <h3 className="text-sm font-bold uppercase mb-2" style={{ color: "#191919" }}>
+                                Work Experience
+                            </h3>
+                            <div>
+                                <div className="mb-4">
+                                    <h4 className="text-lg font-bold mb-1" style={{ color: "#191919" }}>
+                                        Software Developer at XYZ Company
+                                    </h4>
+                                    <p className="text-sm text-gray-600">(2022 - Present)</p>
+                                    <p className="text-sm text-gray-600">
+                                        - Developed and maintained web applications using React and Node.js.
+                                    </p>
                                 </div>
                                 <div>
-                                    <h4 className="font-semibold">Performance Engineer at AGFA Healthcare (2025 - 2025)</h4>
-                                    <p>- Worked on performance testing and optimization of healthcare software solutions.</p>
+                                    <h4 className="text-lg font-bold mb-1" style={{ color: "#191919" }}>
+                                        Performance Engineer at AGFA Healthcare
+                                    </h4>
+                                    <p className="text-sm text-gray-600">(2025 - 2025)</p>
+                                    <p className="text-sm text-gray-600">
+                                        - Worked on performance testing and optimization of healthcare software solutions.
+                                    </p>
                                 </div>
                             </div>
                         </div>
