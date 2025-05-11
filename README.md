@@ -18,3 +18,4 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 - **EmailJS**: For handling contact form submissions.
 
 <!-- for sake of commit -->
+<!-- for sake of commit -->
