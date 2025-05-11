@@ -16,3 +16,5 @@ Welcome to my portfolio website! This project showcases my skills, projects, and
 - **Vite**: For fast development and build processes.
 - **Tailwind CSS**: For styling and responsive design.
 - **EmailJS**: For handling contact form submissions.
+
+<!-- for sake of commit -->
