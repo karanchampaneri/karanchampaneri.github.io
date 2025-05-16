@@ -3,19 +3,31 @@ import { RevealOnScroll } from "../RevealOnScroll";
 export const Projects = () => {
   const projects = [
     {
-      title: "Project 1",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Ea porro eligendi ipsam velit incidunt totam enim quaerat voluptatem sunt reiciendis.",
-      technologies: ["React", "Node.js", "AWS", "Docker"],
+      title: "Carbon Intensity Tracker",
+      description: `Led the development of an automated data pipeline to calculate the carbon intensity of electricity imports, improving data accuracy by 25% and reducing processing time by 40%. Built a Python-based tool that streamlined the extraction of Clean Energy Credit (CEC) invoice and inventory data, cutting retrieval time from 2 hours to just 5 minutes. Collaborated with Karbone Inc. and the IRD team to support the CEC initiative through detailed pricing analysis and policy verification, promoting clean energy adoption and regulatory compliance.`,
+      technologies: ["Python", "Pandas", "NumPy", "Azure VM", "Tableau"],
       link: "#",
     },
     {
-      title: "Project 2",
-      description:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsam exercitationem. Accusamus aperiam suscipit magnam mollitia.",
-      technologies: ["Vue", "Firebase", "TailwindCSS"],
+      title: "Personal Portfolio Website",
+      description: `Designed and developed a fully responsive portfolio website using React, Vite, and TailwindCSS to showcase projects, work experience, and skills. The site emphasizes clean design, fast performance, and accessibility, and is deployed through GitHub Pages for reliable and seamless hosting.`,
+      technologies: ["React", "Vite", "TailwindCSS"],
       link: "#",
     },
+    {
+      title: "Dumbledore, Discord Bot",
+      description:
+        "A dynamic Discord bot built with Python that brings Reddit posts and motivational quotes directly to users in real time. Using the Reddit PRAW and ZenQuotes APIs, the bot keeps conversations fresh and engaging. Designed for responsiveness and reliability, it adapts to peak usage and evolves through user-driven feature updates.",
+      technologies: ["Python", "Discord API", "Reddit PRAW", "ZenQuotes API"],
+      link: "#",
+    },
+    // {
+    //   title: "Project 4",
+    //   description:
+    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsam exercitationem. Accusamus aperiam suscipit magnam mollitia.",
+    //   technologies: ["Vue", "Firebase", "TailwindCSS"],
+    //   link: "#",
+    // },
     // Add more projects as needed
   ];
 

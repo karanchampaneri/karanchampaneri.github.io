@@ -203,7 +203,10 @@ export const About = () => {
                 </p>
                 <p className="text-sm text-gray-600">
                   Relevant Coursework: Data Structures and Algorithms, Software
-                  Design and Architecture, Computer Networks, Database Systems
+                  Design and Architecture, Computer Networks, Database Systems,
+                  Compilers, Operating Systems, Analog Control Systems, Digital
+                  Computers, embedded Systems, Computer Architecture, and
+                  Digital Logic Design.
                 </p>
               </div>
 
@@ -219,12 +222,14 @@ export const About = () => {
                   North Albion Collegiate Institute (Sep 2017 - Jun 2021)
                 </p>
                 <p className="text-sm text-gray-600">
-                  Grade: 12
+                  Ontario Scholar – Awarded for academic excellence (80%+
+                  average in six Grade 12 courses)
                   <br />
-                  Activities and Societies: Pan-Ultimate Steelpan Band,
-                  Baseball, Badminton
+                  Honour Roll – Consistently recognized for high academic
+                  achievement
                   <br />
-                  Honour Roll
+                  Extracurriculars: Pan-Ultimate Steelpan Band, Baseball,
+                  Badminton
                 </p>
               </div>
             </div>
@@ -302,6 +307,53 @@ export const About = () => {
                     compliance with industry standards, promote clean energy
                     adoption, and support carbon footprint reduction
                     initiatives.
+                  </p>
+                </div>
+
+                {/* Ontario Ministry of Health */}
+                <div className="mb-4">
+                  <h4
+                    className="text-lg font-bold mb-1"
+                    style={{ color: "#191919" }}
+                  >
+                    Software Developer at Ontario Ministry of Health
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    09/2022 - 12/2022 | Toronto, ON
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    - Developed and maintained a full-stack TypeScript web
+                    application using React, Node.js, and MongoDB, improving UI
+                    responsiveness and user experience.
+                    <br />
+                    - Resolved 50+ critical bugs through structured testing,
+                    boosting system stability and reliability.
+                    <br />- Streamlined deployment processes using Azure DevOps,
+                    reducing deployment time by 25% and accelerating feature
+                    delivery.
+                  </p>
+                </div>
+
+                {/* Ontario Ministry of Health */}
+                <div className="mb-4">
+                  <h4
+                    className="text-lg font-bold mb-1"
+                    style={{ color: "#191919" }}
+                  >
+                    Executive IT Support at Ministry of Public and Business
+                    Service Delivery and Procurement
+                  </h4>
+                  <p className="text-sm text-gray-600">
+                    01/2022 - 04/2022 | Toronto, ON
+                  </p>
+                  <p className="text-sm text-gray-600">
+                    - Resolved 100+ technical issues across hardware,
+                    networking, and system configurations, ensuring
+                    uninterrupted operations for internal users.
+                    <br />
+                    - Managed and updated web content to enhance cross-device
+                    compatibility and improve accessibility for all users.
+                    <br />
                   </p>
                 </div>
               </div>

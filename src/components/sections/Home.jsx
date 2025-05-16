@@ -1,4 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import { FaGithub, FaLinkedin } from "react-icons/fa";
 
 export const Home = () => {
   return (
@@ -65,6 +66,26 @@ export const Home = () => {
               }}
             >
               Contact Me
+            </a>
+          </div>
+
+          {/* Social Media Icons */}
+          <div className="flex justify-center space-x-4 mt-6">
+            <a
+              href="https://github.com/karanchampaneri"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl hover:text-[#CC785C] transition"
+            >
+              <FaGithub />
+            </a>
+            <a
+              href="https://www.linkedin.com/in/karanchampaneri/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-2xl hover:text-[#CC785C] transition"
+            >
+              <FaLinkedin />
             </a>
           </div>
         </div>
