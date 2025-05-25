@@ -3,23 +3,44 @@ import { RevealOnScroll } from "../RevealOnScroll";
 export const Projects = () => {
   const projects = [
     {
+      title: "SpotifyUnwrapped",
+      description:
+        "A Python-based ETL pipeline to extract, transform, and analyze your Spotify user data using only supported Web API endpoints. Designed to work without deprecated features (e.g., audio-features, recommendations) which now require extended access.",
+      technologies: [
+        "Python",
+        "SpotyPi",
+        "SpotifyWeb API",
+        "Pandas",
+        "NumPy",
+        "Jupyter Notebook",
+      ],
+      link: "https://github.com/karanchampaneri/SpotifyUnwrapped",
+    },
+    {
       title: "Carbon Intensity Tracker",
-      description: `Led the development of an automated data pipeline to calculate the carbon intensity of electricity imports, improving data accuracy by 25% and reducing processing time by 40%. Built a Python-based tool that streamlined the extraction of Clean Energy Credit (CEC) invoice and inventory data, cutting retrieval time from 2 hours to just 5 minutes. Collaborated with Karbone Inc. and the IRD team to support the CEC initiative through detailed pricing analysis and policy verification, promoting clean energy adoption and regulatory compliance.`,
+      description: `A command-line Python tool to log, analyze, and visualize personal finances using Pandas and Matplotlib. Built to support custom date filtering, trend detection, and persistent CSV-based data tracking.`,
       technologies: ["Python", "Pandas", "NumPy", "Azure VM", "Tableau"],
       link: "#",
     },
     {
       title: "Personal Portfolio Website",
-      description: `Designed and developed a fully responsive portfolio website using React, Vite, and TailwindCSS to showcase projects, work experience, and skills. The site emphasizes clean design, fast performance, and accessibility, and is deployed through GitHub Pages for reliable and seamless hosting.`,
+      description: `A fully responsive portfolio site built with React, Vite, and TailwindCSS to showcase projects, skills, and experience. Designed with clean architecture, performance, and accessibility in mind, and deployed via GitHub Pages.`,
       technologies: ["React", "Vite", "TailwindCSS"],
-      link: "#",
+      link: "https://github.com/karanchampaneri/karanchampaneri.github.io",
     },
     {
       title: "Dumbledore, Discord Bot",
       description:
-        "A dynamic Discord bot built with Python that brings Reddit posts and motivational quotes directly to users in real time. Using the Reddit PRAW and ZenQuotes APIs, the bot keeps conversations fresh and engaging. Designed for responsiveness and reliability, it adapts to peak usage and evolves through user-driven feature updates.",
+        "A Python-powered Discord bot that delivers Reddit posts and motivational quotes using the Reddit PRAW and ZenQuotes APIs. Built for real-time interaction, user engagement, and feature scalability based on community feedback.",
       technologies: ["Python", "Discord API", "Reddit PRAW", "ZenQuotes API"],
-      link: "#",
+      link: "https://github.com/karanchampaneri/Dumbledore-A-Personal-Discord-Bot",
+    },
+    {
+      title: "Personal Finance Tracker CLI",
+      description:
+        "A command-line finance tracker that logs transactions to a CSV, analyzes income and expenses within date ranges using pandas, and visualizes trends with matplotlib. Implements boolean masking, resampling, and file-based data persistence.",
+      technologies: ["Python", "Pandas", "Matplotlib"],
+      link: "https://github.com/karanchampaneri/personal-finance-tracker",
     },
     // {
     //   title: "Project 4",
@@ -66,6 +87,8 @@ export const Projects = () => {
                 <p className="text-gray-600 mb-6">{project.description}</p>
                 <a
                   href={project.link}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="inline-block px-6 py-2 text-sm font-medium rounded-md bg-black text-white hover:bg-[#CC785C] hover:text-white transition-colors"
                 >
                   View Project
