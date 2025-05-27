@@ -5,7 +5,7 @@ export const Projects = () => {
     {
       title: "SpotifyUnwrapped",
       description:
-        "A Python-based ETL pipeline to extract, transform, and analyze your Spotify user data using only supported Web API endpoints. Designed to work without deprecated features (e.g., audio-features, recommendations) which now require extended access.",
+        "A Python-based ETL pipeline that extracts, transforms, and analyzes your Spotify user data using only supported Web API endpoints. Built to function without deprecated features, ensuring compatibility and privacy.",
       technologies: [
         "Python",
         "SpotyPi",
@@ -18,37 +18,37 @@ export const Projects = () => {
     },
     {
       title: "Carbon Intensity Tracker",
-      description: `A command-line Python tool to log, analyze, and visualize personal finances using Pandas and Matplotlib. Built to support custom date filtering, trend detection, and persistent CSV-based data tracking.`,
+      description: `A command-line tool for logging, analyzing, and visualizing personal carbon intensity data. Supports custom date filtering, trend analysis, and persistent CSV-based tracking, leveraging Pandas and Tableau for insights.`,
       technologies: ["Python", "Pandas", "NumPy", "Azure VM", "Tableau"],
       link: "#",
     },
     {
       title: "Personal Portfolio Website",
-      description: `A fully responsive portfolio site built with React, Vite, and TailwindCSS to showcase projects, skills, and experience. Designed with clean architecture, performance, and accessibility in mind, and deployed via GitHub Pages.`,
+      description: `A fully responsive portfolio site built with React, Vite, and TailwindCSS to showcase my projects, skills, and experience. Designed for performance, accessibility, and clean architecture, and deployed via GitHub Pages.`,
       technologies: ["React", "Vite", "TailwindCSS"],
       link: "https://github.com/karanchampaneri/karanchampaneri.github.io",
     },
     {
       title: "Dumbledore, Discord Bot",
       description:
-        "A Python-powered Discord bot that delivers Reddit posts and motivational quotes using the Reddit PRAW and ZenQuotes APIs. Built for real-time interaction, user engagement, and feature scalability based on community feedback.",
+        "A Python-powered Discord bot that delivers Reddit posts and motivational quotes using the Reddit PRAW and ZenQuotes APIs. Built for real-time interaction, user engagement, and scalable features based on community feedback.",
       technologies: ["Python", "Discord API", "Reddit PRAW", "ZenQuotes API"],
       link: "https://github.com/karanchampaneri/Dumbledore-A-Personal-Discord-Bot",
     },
     {
       title: "Personal Finance Tracker CLI",
       description:
-        "A command-line finance tracker that logs transactions to a CSV, analyzes income and expenses within date ranges using pandas, and visualizes trends with matplotlib. Implements boolean masking, resampling, and file-based data persistence.",
+        "A command-line finance tracker that logs transactions to CSV, analyzes income and expenses over custom date ranges with pandas, and visualizes trends using matplotlib. Implements efficient data filtering and persistent storage.",
       technologies: ["Python", "Pandas", "Matplotlib"],
       link: "https://github.com/karanchampaneri/personal-finance-tracker",
     },
-    // {
-    //   title: "Project 4",
-    //   description:
-    //     "Lorem ipsum dolor sit amet consectetur adipisicing elit. Eveniet, ipsam exercitationem. Accusamus aperiam suscipit magnam mollitia.",
-    //   technologies: ["Vue", "Firebase", "TailwindCSS"],
-    //   link: "#",
-    // },
+    {
+      title: "PyGame Aim Trainer",
+      description:
+        "A PyGame-based game designed to help players improve their aim by shooting targets on the screen. Features a scoring system, time tracking, and an engaging, challenging gameplay experience.",
+      technologies: ["Python", "PyGame"],
+      link: "https://github.com/karanchampaneri/Python-Aim-Trainer",
+    },
     // Add more projects as needed
   ];
 
