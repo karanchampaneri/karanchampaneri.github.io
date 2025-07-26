@@ -15,7 +15,7 @@ const DarkModeToggle = () => {
       aria-label="Toggle dark mode"
       title={isDarkMode ? 'Switch to light mode' : 'Switch to dark mode'}
     >
-      <FiMoon size={20} />
+      {isDarkMode ? <FiSun size={20} /> : <FiMoon size={20} />}
     </button>
   );
 };
