@@ -1,8 +1,11 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import emailjs from "emailjs-com";
 import { useState } from "react";
+import { useDarkMode } from "../../contexts/DarkModeContext";
 
 export const Contact = () => {
+  const { isDarkMode } = useDarkMode();
+  
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,19 +36,19 @@ export const Contact = () => {
   return (
     <section
       id="contact"
-      className="min-h-screen flex items-center justify-center py-20"
-      style={{ backgroundColor: "#F0F0EB" }} // Ivory Medium
+      className={`min-h-screen flex items-center justify-center py-20 ${
+        isDarkMode ? 'bg-[#0a0a0a]' : 'bg-[#F0F0EB]'
+      }`}
     >
       <RevealOnScroll>
         <div className="max-w-4xl mx-auto px-6">
           {/* Section Title */}
-          <h2
-            className="text-4xl font-bold mb-8 text-center"
-            style={{ color: "#CC785C" }}
-          >
+          <h2 className="text-4xl font-bold mb-8 text-center text-[#CC785C]">
             Get in Touch
           </h2>
-          <p className="text-lg text-gray-600 text-center mb-12">
+          <p className={`text-lg text-center mb-12 ${
+            isDarkMode ? 'text-gray-400' : 'text-gray-600'
+          }`}>
             Have a question or want to work together? Fill out the form below,
             and I'll get back to you as soon as possible.
           </p>
@@ -60,7 +63,11 @@ export const Contact = () => {
                 name="name"
                 required
                 value={formData.name}
-                className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-800 transition focus:outline-none focus:border-[#CC785C] focus:ring-1 focus:ring-[#CC785C]"
+                className={`w-full rounded-lg px-4 py-3 transition focus:outline-none focus:border-[#CC785C] focus:ring-1 focus:ring-[#CC785C] ${
+                  isDarkMode 
+                    ? 'bg-[#1a1a1a] border border-[#333333] text-gray-200' 
+                    : 'bg-white border border-gray-300 text-gray-800'
+                }`}
                 placeholder="Your Name"
                 onChange={(e) =>
                   setFormData({ ...formData, name: e.target.value })
@@ -76,7 +83,11 @@ export const Contact = () => {
                 name="email"
                 required
                 value={formData.email}
-                className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-800 transition focus:outline-none focus:border-[#CC785C] focus:ring-1 focus:ring-[#CC785C]"
+                className={`w-full rounded-lg px-4 py-3 transition focus:outline-none focus:border-[#CC785C] focus:ring-1 focus:ring-[#CC785C] ${
+                  isDarkMode 
+                    ? 'bg-[#1a1a1a] border border-[#333333] text-gray-200' 
+                    : 'bg-white border border-gray-300 text-gray-800'
+                }`}
                 placeholder="Your Email"
                 onChange={(e) =>
                   setFormData({ ...formData, email: e.target.value })
@@ -92,7 +103,11 @@ export const Contact = () => {
                 required
                 rows={5}
                 value={formData.message}
-                className="w-full bg-white border border-gray-300 rounded-lg px-4 py-3 text-gray-800 transition focus:outline-none focus:border-[#CC785C] focus:ring-1 focus:ring-[#CC785C]"
+                className={`w-full rounded-lg px-4 py-3 transition focus:outline-none focus:border-[#CC785C] focus:ring-1 focus:ring-[#CC785C] ${
+                  isDarkMode 
+                    ? 'bg-[#1a1a1a] border border-[#333333] text-gray-200' 
+                    : 'bg-white border border-gray-300 text-gray-800'
+                }`}
                 placeholder="Your Message"
                 onChange={(e) =>
                   setFormData({ ...formData, message: e.target.value })

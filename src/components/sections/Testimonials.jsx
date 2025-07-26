@@ -1,7 +1,10 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import IESOLogo from "../../assets/images/IESO.png"; // Import the logo image
+import { useDarkMode } from "../../contexts/DarkModeContext";
 
 export const Testimonials = () => {
+  const { isDarkMode } = useDarkMode();
+  
   const testimonials = [
     {
       logo: IESOLogo, // Replace with the actual logo path
@@ -20,14 +23,15 @@ export const Testimonials = () => {
   return (
     <section
       id="testimonials"
-      className="min-h-screen flex items-center justify-center py-20"
-      style={{ backgroundColor: "#F0F0EB" }} // Ivory Medium
+      className={`min-h-screen flex items-center justify-center py-20 ${
+        isDarkMode ? 'bg-[#0a0a0a]' : 'bg-[#F0F0EB]'
+      }`}
     >
       <RevealOnScroll>
         <div className="max-w-5xl mx-auto px-6 md:px-12">
           {/* Section Title */}
           <div className="text-center mb-12">
-            <h2 className="text-4xl font-bold" style={{ color: "#CC785C" }}>
+            <h2 className="text-4xl font-bold text-[#CC785C]">
               Testimonials
             </h2>
           </div>
@@ -50,14 +54,18 @@ export const Testimonials = () => {
                 </div>
 
                 {/* Testimonial Quote */}
-                <blockquote className="text-xl font-semibold text-gray-800 mb-4">
+                <blockquote className={`text-xl font-semibold mb-4 ${
+                  isDarkMode ? 'text-gray-800' : 'text-gray-800'
+                }`}>
                   <p className="mb-4">"{testimonial.quote}"</p>
                   <p className="mb-4">"{testimonial.quote2}"</p>
                   <p className="mb-4">"{testimonial.quote3}"</p>
                 </blockquote>
 
                 {/* Author and Position */}
-                <p className="text-lg text-gray-600">
+                <p className={`text-lg ${
+                  isDarkMode ? 'text-gray-600' : 'text-gray-600'
+                }`}>
                   <strong>{testimonial.author}</strong>, {testimonial.position}
                 </p>
               </div>

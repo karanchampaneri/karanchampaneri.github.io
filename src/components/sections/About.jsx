@@ -1,7 +1,10 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import karanImage from "/src/assets/images/karan4.png";
+import { useDarkMode } from "../../contexts/DarkModeContext";
 
 export const About = () => {
+  const { isDarkMode } = useDarkMode();
+
   const languages = [
     "Python",
     "C++",
@@ -48,20 +51,18 @@ export const About = () => {
   return (
     <section
       id="about"
-      className="min-h-screen flex flex-col justify-center py-20"
-      style={{ backgroundColor: "#F0F0EB" }} // Ivory Medium
+      className={`min-h-screen flex flex-col justify-center py-20 ${isDarkMode ? 'bg-[#0a0a0a]' : 'bg-[#F0F0EB]'
+        }`}
     >
       <RevealOnScroll>
         <div className="max-w-7xl mx-auto px-12">
           {/* Introduction Section */}
           <div className="text-center mb-12">
-            <h3 className="leading-relaxed mb-4" style={{ color: "#CC785C" }}>
+            <h3 className="leading-relaxed mb-4 text-[#CC785C]">
               Introduction
             </h3>
-            <h2
-              className="text-5xl font-bold mb-4"
-              style={{ color: "#191919" }}
-            >
+            <h2 className={`text-5xl font-bold mb-4 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+              }`}>
               About Me
             </h2>
           </div>
@@ -79,10 +80,8 @@ export const About = () => {
 
             {/* Right Column: Paragraph */}
             <div>
-              <p
-                className="mb-6 text-lg leading-relaxed"
-                style={{ color: "#191919" }}
-              >
+              <p className={`mb-6 text-lg leading-relaxed ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                }`}>
                 Hey, I’m Karan — a Computer Engineering student at the
                 University of Waterloo who enjoys building clean, performant
                 software that makes real-world systems more intuitive and
@@ -103,16 +102,15 @@ export const About = () => {
 
           {/* Skills Section */}
           <div className="mb-16">
-            <h3
-              className="text-2xl font-bold mb-6"
-              style={{ color: "#191919" }}
-            >
+            <h3 className={`text-2xl font-bold mb-6 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+              }`}>
               Skills
             </h3>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
               {/* Frontend Skills */}
               <div>
-                <h4 className="font-semibold mb-2" style={{ color: "#191919" }}>
+                <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                  }`}>
                   Languages
                 </h4>
                 <div className="flex flex-wrap gap-2">
@@ -133,7 +131,8 @@ export const About = () => {
 
               {/* Backend Skills */}
               <div>
-                <h4 className="font-semibold mb-2" style={{ color: "#191919" }}>
+                <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                  }`}>
                   Tools and Technologies
                 </h4>
                 <div className="flex flex-wrap gap-2">
@@ -154,7 +153,8 @@ export const About = () => {
 
               {/* Other Skills */}
               <div>
-                <h4 className="font-semibold mb-2" style={{ color: "#191919" }}>
+                <h4 className={`font-semibold mb-2 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                  }`}>
                   Frameworks & Libraries
                 </h4>
                 <div className="flex flex-wrap gap-2">
@@ -174,187 +174,147 @@ export const About = () => {
               </div>
             </div>
           </div>
-          {/* Bottom Section: Education and Work Experience */}
-          {/* Bottom Section: Education and Work Experience */}
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-6 w-full max-w-7xl mx-auto">
-            {/* Education Section */}
-            <div
-              className="p-6 rounded-lg shadow-md bg-[#FFFFFF] flex flex-col"
-              style={{
-                border: "1px solid #E5E5E5", // Light gray border to match the Projects section
-              }}
-            >
-              <h3
-                className="text-sm font-bold uppercase mb-4"
-                style={{ color: "#191919" }}
-              >
+          {/* Education and Work Experience Section */}
+          <div className="space-y-8">
+            {/* Education Section - Horizontal Layout */}
+            <div className={`p-6 rounded-lg shadow-md ${isDarkMode
+              ? 'bg-[#1a1a1a] border border-[#333333]'
+              : 'bg-white border border-gray-200'
+              }`}>
+              <h3 className={`text-sm font-bold uppercase mb-6 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                }`}>
                 Education
               </h3>
-              <div>
-                {/* University */}
-                <h4
-                  className="text-lg font-bold mb-2"
-                  style={{ color: "#191919" }}
-                >
-                  BASc in Computer Engineering
-                </h4>
-                <p className="text-sm text-gray-600 mb-4">
-                  University of Waterloo (2021 - 2026)
-                </p>
-                <p className="text-sm text-gray-600">
-                  Relevant Coursework: Data Structures and Algorithms, Software
-                  Design and Architecture, Computer Networks, Database Systems,
-                  Compilers, Operating Systems, Analog Control Systems, Digital
-                  Computers, embedded Systems, Computer Architecture, and
-                  Digital Logic Design.
-                </p>
-              </div>
 
-              <div className="mt-6">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+                {/* University */}
+                <div>
+                  <h4 className={`text-lg font-bold mb-2 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                    }`}>
+                    BASc in Computer Engineering
+                  </h4>
+                  <p className={`text-sm mb-3 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                    }`}>
+                    University of Waterloo (2021 - 2026)
+                  </p>
+                  <p className={`text-sm ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                    }`}>
+                    Relevant Coursework: Data Structures and Algorithms, Software
+                    Design and Architecture, Computer Networks, Database Systems,
+                    Compilers, Operating Systems, Analog Control Systems, Digital
+                    Computers, embedded Systems, Computer Architecture, and
+                    Digital Logic Design.
+                  </p>
+                </div>
+
                 {/* High School */}
-                <h4
-                  className="text-lg font-bold mb-2"
-                  style={{ color: "#191919" }}
-                >
-                  Ontario Secondary School Diploma
-                </h4>
-                <p className="text-sm text-gray-600 mb-4">
-                  North Albion Collegiate Institute (Sep 2017 - Jun 2021)
-                </p>
-                <p className="text-sm text-gray-600">
-                  Ontario Scholar – Awarded for academic excellence (80%+
-                  average in six Grade 12 courses)
-                  <br />
-                  Honour Roll – Consistently recognized for high academic
-                  achievement
-                  <br />
-                  Extracurriculars: Pan-Ultimate Steelpan Band, Baseball,
-                  Badminton
-                </p>
+                <div>
+                  <h4 className={`text-lg font-bold mb-2 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                    }`}>
+                    Ontario Secondary School Diploma
+                  </h4>
+                  <p className={`text-sm mb-3 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                    }`}>
+                    North Albion Collegiate Institute (Sep 2017 - Jun 2021)
+                  </p>
+                  <div className={`text-sm space-y-1 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                    }`}>
+                    <p>• Ontario Scholar – Academic excellence (80%+ average)</p>
+                    <p>• Honour Roll – Consistently high achievement</p>
+                    <p>• Extracurriculars: Pan-Ultimate Steelpan Band, Baseball, Badminton</p>
+                  </div>
+                </div>
               </div>
             </div>
 
-            {/* Work Experience Section */}
-            <div
-              className="p-6 rounded-lg shadow-md bg-[#FFFFFF] flex flex-col"
-              style={{
-                border: "1px solid #E5E5E5", // Light gray border to match the Projects section
-              }}
-            >
-              <h3
-                className="text-sm font-bold uppercase mb-4"
-                style={{ color: "#191919" }}
-              >
+            {/* Work Experience Section - Full Width */}
+            <div className={`p-6 rounded-lg shadow-md ${isDarkMode
+              ? 'bg-[#1a1a1a] border border-[#333333]'
+              : 'bg-white border border-gray-200'
+              }`}>
+              <h3 className={`text-sm font-bold uppercase mb-6 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                }`}>
                 Work Experience
               </h3>
-              <div>
-                {/* AGFA HealthCare */}
-                <div className="mb-4">
-                  <h4
-                    className="text-lg font-bold mb-1"
-                    style={{ color: "#191919" }}
-                  >
-                    Performance Engineer Co-op at AGFA HealthCare
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    01/2025 - 04/2025 | Waterloo, ON
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    - Provisioned over 10,000 users and 900 external systems
-                    into enterprise imaging clusters using automated XML
-                    pipelines and Python scripts, improving deployment
-                    efficiency by 60%.
-                    <br />
-                    - Built and maintained OpenSearch/Elasticsearch dashboards
-                    in Grafana using Lucene syntax, enabling near real-time
-                    tracking of performance metrics across 20+ nodes.
-                    <br />
-                    - Resolved user activation issues by analyzing database
-                    schema and scripting SQL updates with encrypted credentials,
-                    reducing post-import defects by 80%.
-                    <br />- Automated system updates and Java memory
-                    configuration via Jenkins pipelines and VM deployments,
-                    cutting manual setup time by 50% and supporting high-load
-                    operations.
-                  </p>
+
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
+                {/* Left Column */}
+                <div className="space-y-6">
+                  {/* AGFA HealthCare */}
+                  <div>
+                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                      }`}>
+                      Performance Engineer Co-op at AGFA HealthCare
+                    </h4>
+                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                      }`}>
+                      01/2025 - 04/2025 | Waterloo, ON
+                    </p>
+                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                      }`}>
+                      <li>• Provisioned over 10,000 users and 900 external systems into enterprise imaging clusters using automated XML pipelines and Python scripts, improving deployment efficiency by 60%</li>
+                      <li>• Built and maintained OpenSearch/Elasticsearch dashboards in Grafana using Lucene syntax, enabling near real-time tracking of performance metrics across 20+ nodes</li>
+                      <li>• Resolved user activation issues by analyzing database schema and scripting SQL updates with encrypted credentials, reducing post-import defects by 80%</li>
+                      <li>• Automated system updates and Java memory configuration via Jenkins pipelines and VM deployments, cutting manual setup time by 50% and supporting high-load operations</li>
+                    </ul>
+                  </div>
+
+                  {/* Independent Electricity System Operator */}
+                  <div>
+                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                      }`}>
+                      Software Developer & Analyst Co-op at Independent Electricity System Operator
+                    </h4>
+                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                      }`}>
+                      01/2024 - 04/2024 | Toronto, ON
+                    </p>
+                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                      }`}>
+                      <li>• Led development of automated data harvesting pipeline for calculating carbon intensity of electricity imports using Python, Pandas, and Selenium, enhancing data accuracy by 25% and reducing processing time by 70%</li>
+                      <li>• Developed Python tool to streamline extraction of CEC invoices and inventory information, reducing data retrieval time from 2 hours to 5 minutes</li>
+                      <li>• Collaborated with Karbone Inc. and IRD team on Clean Energy Credits project, performing detailed pricing analysis and policy verification to ensure compliance with industry standards</li>
+                    </ul>
+                  </div>
                 </div>
 
-                {/* Independent Electricity System Operator */}
-                <div className="mb-4">
-                  <h4
-                    className="text-lg font-bold mb-1"
-                    style={{ color: "#191919" }}
-                  >
-                    Software Developer & Analyst Co-op at Independent
-                    Electricity System Operator
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    01/2024 - 04/2024 | Toronto, ON
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    - Solely led the development of an automated data harvesting
-                    pipeline for calculating carbon intensity of electricity
-                    imports using Python, Pandas, and Selenium, significantly
-                    enhancing data accuracy by 25% and reducing processing time
-                    by 70%.
-                    <br />
-                    - Developed a Python tool to streamline the extraction of
-                    information about CEC invoices and inventory, reducing data
-                    retrieval time from 2 hours to 5 minutes.
-                    <br />- Collaborated with Karbone Inc. and the IRD team on
-                    the Clean Energy Credits (CEC) project, performing detailed
-                    pricing analysis and policy verification to ensure
-                    compliance with industry standards, promote clean energy
-                    adoption, and support carbon footprint reduction
-                    initiatives.
-                  </p>
-                </div>
+                {/* Right Column */}
+                <div className="space-y-6">
+                  {/* Ontario Ministry of Health */}
+                  <div>
+                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                      }`}>
+                      Software Developer at Ontario Ministry of Health
+                    </h4>
+                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                      }`}>
+                      09/2022 - 12/2022 | Toronto, ON
+                    </p>
+                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                      }`}>
+                      <li>• Developed and maintained full-stack TypeScript web application using React, Node.js, and MongoDB, improving UI responsiveness and user experience</li>
+                      <li>• Resolved 50+ critical bugs through structured testing, boosting system stability and reliability across the platform</li>
+                      <li>• Streamlined deployment processes using Azure DevOps, reducing deployment time by 25% and accelerating feature delivery cycles</li>
+                    </ul>
+                  </div>
 
-                {/* Ontario Ministry of Health */}
-                <div className="mb-4">
-                  <h4
-                    className="text-lg font-bold mb-1"
-                    style={{ color: "#191919" }}
-                  >
-                    Software Developer at Ontario Ministry of Health
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    09/2022 - 12/2022 | Toronto, ON
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    - Developed and maintained a full-stack TypeScript web
-                    application using React, Node.js, and MongoDB, improving UI
-                    responsiveness and user experience.
-                    <br />
-                    - Resolved 50+ critical bugs through structured testing,
-                    boosting system stability and reliability.
-                    <br />- Streamlined deployment processes using Azure DevOps,
-                    reducing deployment time by 25% and accelerating feature
-                    delivery.
-                  </p>
-                </div>
-
-                {/* Ontario Ministry of Health */}
-                <div className="mb-4">
-                  <h4
-                    className="text-lg font-bold mb-1"
-                    style={{ color: "#191919" }}
-                  >
-                    Executive IT Support at Ministry of Public and Business
-                    Service Delivery and Procurement
-                  </h4>
-                  <p className="text-sm text-gray-600">
-                    01/2022 - 04/2022 | Toronto, ON
-                  </p>
-                  <p className="text-sm text-gray-600">
-                    - Resolved 100+ technical issues across hardware,
-                    networking, and system configurations, ensuring
-                    uninterrupted operations for internal users.
-                    <br />
-                    - Managed and updated web content to enhance cross-device
-                    compatibility and improve accessibility for all users.
-                    <br />
-                  </p>
+                  {/* Executive IT Support */}
+                  <div>
+                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                      }`}>
+                      Executive IT Support at Ministry of Public and Business Service Delivery and Procurement
+                    </h4>
+                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                      }`}>
+                      01/2022 - 04/2022 | Toronto, ON
+                    </p>
+                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                      }`}>
+                      <li>• Resolved 100+ technical issues across hardware, networking, and system configurations, ensuring uninterrupted operations for internal users</li>
+                      <li>• Managed and updated web content to enhance cross-device compatibility and improve accessibility standards for all users</li>
+                      <li>• Provided technical support and troubleshooting for various software applications and system integrations</li>
+                    </ul>
+                  </div>
                 </div>
               </div>
             </div>
