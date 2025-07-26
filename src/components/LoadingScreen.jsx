@@ -1,6 +1,8 @@
 import { useEffect, useState } from "react";
+import { useDarkMode } from "../contexts/DarkModeContext";
 
 export const LoadingScreen = ({ onComplete }) => {
+  const { isDarkMode } = useDarkMode();
   // Array of greetings in different languages
   const greetings = [
     "<Hello World!/>",
@@ -37,11 +39,8 @@ export const LoadingScreen = ({ onComplete }) => {
 
   return (
     <div
-      className="fixed inset-0 z-50 flex items-center justify-center"
-      style={{
-        backgroundColor: "#F0F0EB", // Ivory Medium
-        color: "#191919", // Slate Dark
-      }}
+      className={`fixed inset-0 z-50 flex items-center justify-center ${isDarkMode ? 'bg-[#0a0a0a] text-[#f3f4f6]' : 'bg-[#F0F0EB] text-[#191919]'
+        }`}
     >
       {/* Centered Container */}
       <div className="flex flex-col items-center">
@@ -51,17 +50,12 @@ export const LoadingScreen = ({ onComplete }) => {
         </div>
 
         {/* Loading Bar */}
-        <div
-          className="w-[200px] h-[2px] rounded relative overflow-hidden"
-          style={{
-            backgroundColor: "#CC785C", // Book Cloth
-          }}
-        >
+        <div className="w-[200px] h-[2px] rounded relative overflow-hidden bg-[#CC785C]">
           <div
-            className="w-[40%] h-full animate-loading-bar"
+            className={`w-[40%] h-full animate-loading-bar ${isDarkMode ? 'bg-[#0a0a0a]' : 'bg-[#F0F0EB]'
+              }`}
             style={{
-              backgroundColor: "#F0F0EB", // Ivory Medium
-              boxShadow: "0 0 15px #CC785C", // Book Cloth
+              boxShadow: "0 0 15px #CC785C", // Book Cloth glow effect
             }}
           ></div>
         </div>

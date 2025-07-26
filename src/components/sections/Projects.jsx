@@ -1,6 +1,9 @@
 import { RevealOnScroll } from "../RevealOnScroll";
+import { useDarkMode } from "../../contexts/DarkModeContext";
 
 export const Projects = () => {
+  const { isDarkMode } = useDarkMode();
+  
   const projects = [
     {
       title: "SpotifyUnwrapped",
@@ -55,8 +58,9 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className="min-h-screen flex flex-col justify-center py-20"
-      style={{ backgroundColor: "#F0F0EB" }} // Ivory Medium
+      className={`min-h-screen flex flex-col justify-center py-20 ${
+        isDarkMode ? 'bg-[#0a0a0a]' : 'bg-[#F0F0EB]'
+      }`}
     >
       <RevealOnScroll>
         <div className="max-w-7xl mx-auto px-12">
@@ -65,7 +69,9 @@ export const Projects = () => {
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r text-[#CC785C] bg-clip-text">
               Featured Projects
             </h2>
-            <p className="text-lg text-gray-600">
+            <p className={`text-lg ${
+              isDarkMode ? 'text-gray-400' : 'text-gray-600'
+            }`}>
               A selection of projects showcasing my skills and experience in
               software development.
             </p>
@@ -76,20 +82,34 @@ export const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className="p-6 rounded-lg border border-gray-200 bg-white shadow-sm hover:shadow-md transition-shadow"
+                className={`p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow ${
+                  isDarkMode 
+                    ? 'bg-[#1a1a1a] border border-[#333333]' 
+                    : 'bg-white border border-gray-200'
+                }`}
               >
-                <h4 className="text-sm font-semibold text-gray-500 uppercase mb-2">
+                <h4 className={`text-sm font-semibold uppercase mb-2 ${
+                  isDarkMode ? 'text-gray-400' : 'text-gray-500'
+                }`}>
                   {project.technologies.join(", ")}
                 </h4>
-                <h3 className="text-2xl font-bold text-gray-800 mb-4">
+                <h3 className={`text-2xl font-bold mb-4 ${
+                  isDarkMode ? 'text-gray-200' : 'text-gray-800'
+                }`}>
                   {project.title}
                 </h3>
-                <p className="text-gray-600 mb-6">{project.description}</p>
+                <p className={`mb-6 ${
+                  isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                }`}>{project.description}</p>
                 <a
                   href={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-block px-6 py-2 text-sm font-medium rounded-md bg-black text-white hover:bg-[#CC785C] hover:text-white transition-colors"
+                  className={`inline-block px-6 py-2 text-sm font-medium rounded-md transition-colors hover:bg-[#CC785C] hover:text-white ${
+                    isDarkMode 
+                      ? 'bg-white text-black' 
+                      : 'bg-black text-white'
+                  }`}
                 >
                   View Project
                 </a>

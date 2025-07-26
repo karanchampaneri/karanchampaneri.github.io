@@ -1,18 +1,23 @@
 import { RevealOnScroll } from "../RevealOnScroll";
 import { FaGithub, FaLinkedin } from "react-icons/fa";
+import { useDarkMode } from "../../contexts/DarkModeContext";
 
 export const Home = () => {
+  const { isDarkMode } = useDarkMode();
+  
   return (
     <section
       id="home"
-      className="min-h-screen flex items-center justify-center relative"
-      style={{ backgroundColor: "#F0F0EB" }} // Ivory Medium
+      className={`min-h-screen flex items-center justify-center relative ${
+        isDarkMode ? 'bg-[#0a0a0a]' : 'bg-[#F0F0EB]'
+      }`}
     >
       <RevealOnScroll>
         <div className="text-center z-10 px-4">
           <h1
-            className="text-5xl md:text-7xl font-bold mb-6 leading-tight"
-            style={{ color: "#191919" }}
+            className={`text-5xl md:text-7xl font-bold mb-6 leading-tight ${
+              isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+            }`}
           >
             Hi, I'm{" "}
             <span className="underline decoration-[#CC785C]">
@@ -21,8 +26,9 @@ export const Home = () => {
           </h1>
 
           <p
-            className="text-lg mb-8 max-w-lg mx-auto"
-            style={{ color: "#191919" }}
+            className={`text-lg mb-8 max-w-lg mx-auto ${
+              isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+            }`}
           >
             I’m a computer engineering student passionate about building
             reliable systems and intuitive software that solve real-world
@@ -32,38 +38,22 @@ export const Home = () => {
           <div className="flex justify-center space-x-4">
             <a
               href="#projects"
-              className="px-6 py-3 rounded-lg font-medium transition"
-              style={{
-                backgroundColor: "#191919", // Slate Dark
-                color: "#FFFFFF", // White
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#CC785C"; // Book Cloth
-                e.target.style.color = "#FFFFFF"; // White
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "#191919"; // Slate Dark
-                e.target.style.color = "#FFFFFF"; // White
-              }}
+              className={`px-6 py-3 rounded-lg font-medium transition hover:bg-[#CC785C] hover:text-white ${
+                isDarkMode 
+                  ? 'bg-[#f3f4f6] text-[#191919]' 
+                  : 'bg-[#191919] text-white'
+              }`}
             >
               View Projects
             </a>
 
             <a
               href="#contact"
-              className="px-6 py-3 rounded-lg font-medium border transition"
-              style={{
-                borderColor: "#191919", // Slate Dark
-                color: "#191919", // Slate Dark
-              }}
-              onMouseEnter={(e) => {
-                e.target.style.backgroundColor = "#CC785C"; // Book Cloth
-                e.target.style.color = "#FFFFFF"; // White
-              }}
-              onMouseLeave={(e) => {
-                e.target.style.backgroundColor = "transparent";
-                e.target.style.color = "#191919"; // Slate Dark
-              }}
+              className={`px-6 py-3 rounded-lg font-medium border transition hover:bg-[#CC785C] hover:text-white hover:border-[#CC785C] ${
+                isDarkMode 
+                  ? 'border-[#f3f4f6] text-[#f3f4f6]' 
+                  : 'border-[#191919] text-[#191919]'
+              }`}
             >
               Contact Me
             </a>
@@ -75,7 +65,9 @@ export const Home = () => {
               href="https://github.com/karanchampaneri"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl hover:text-[#CC785C] transition"
+              className={`text-2xl hover:text-[#CC785C] transition ${
+                isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+              }`}
             >
               <FaGithub />
             </a>
@@ -83,7 +75,9 @@ export const Home = () => {
               href="https://www.linkedin.com/in/karanchampaneri/"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-2xl hover:text-[#CC785C] transition"
+              className={`text-2xl hover:text-[#CC785C] transition ${
+                isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+              }`}
             >
               <FaLinkedin />
             </a>

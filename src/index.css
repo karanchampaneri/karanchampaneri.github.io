@@ -5,6 +5,17 @@ body {
   margin: 0;
   padding: 0;
   font-family: "Fira Code", monospace;
+  transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+/* Light mode styles */
+html:not(.dark) body {
+  background: #ffffff;
+  color: #1f2937;
+}
+
+/* Dark mode styles */
+html.dark body {
   background: #0a0a0a;
   color: #f3f4f6;
 }
@@ -14,6 +25,7 @@ body {
     0% {
       opacity: 1;
     }
+
     50% {
       opacity: 0;
     }
@@ -27,6 +39,7 @@ body {
     0% {
       transform: translateX(-100%);
     }
+
     100% {
       transform: translateX(250%);
     }
