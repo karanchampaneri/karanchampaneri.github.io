@@ -3,8 +3,36 @@ import { useDarkMode } from "../../contexts/DarkModeContext";
 
 export const Projects = () => {
   const { isDarkMode } = useDarkMode();
-  
+
   const projects = [
+    {
+      title: "CareerCompass",
+      description:
+        "CareerCompass is a comprehensive career development mobile app built with Kotlin and Jetpack Compose for Android. It empowers professionals at all stages to set and track career goals, analyze skill gaps, generate professional resumes and cover letters, and prepare for interviews with AI-powered feedback. The app features a personalized dashboard, secure Firebase authentication, PDF export, voice recording, and automated reminders, all wrapped in a Material Design 3-compliant interface.",
+      technologies: [
+        "Kotlin",
+        "Jetpack Compose",
+        "Firebase",
+        "Material Design 3",
+        "Android"
+      ],
+      link: "https://github.com/ethanbenjamingabriel/ece452",
+      isPrivate: true
+    },
+    {
+      title: "LexiLog",
+      description:
+        "LexiLog is a cross-platform vocabulary builder and personal dictionary app built with Expo, React Native, and Tamagui. It helps users log new words they encounter from daily life or media, automatically fetches definitions, and organizes their personal lexical database to boost vocabulary learning. Features include secure login with Firebase, beautiful UI, custom theming, and a seamless experience across iOS, Android, and Web.",
+      technologies: [
+        "React Native",
+        "Expo",
+        "Tamagui",
+        "Firebase",
+        "JavaScript",
+        "TypeScript"
+      ],
+      link: "https://github.com/karanchampaneri/LexiLog",
+    },
     {
       title: "SpotifyUnwrapped",
       description:
@@ -58,9 +86,8 @@ export const Projects = () => {
   return (
     <section
       id="projects"
-      className={`min-h-screen flex flex-col justify-center py-20 ${
-        isDarkMode ? 'bg-[#0a0a0a]' : 'bg-[#F0F0EB]'
-      }`}
+      className={`min-h-screen flex flex-col justify-center py-20 ${isDarkMode ? 'bg-[#0a0a0a]' : 'bg-[#F0F0EB]'
+        }`}
     >
       <RevealOnScroll>
         <div className="max-w-7xl mx-auto px-12">
@@ -69,9 +96,8 @@ export const Projects = () => {
             <h2 className="text-4xl font-bold mb-4 bg-gradient-to-r text-[#CC785C] bg-clip-text">
               Featured Projects
             </h2>
-            <p className={`text-lg ${
-              isDarkMode ? 'text-gray-400' : 'text-gray-600'
-            }`}>
+            <p className={`text-lg ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
+              }`}>
               A selection of projects showcasing my skills and experience in
               software development.
             </p>
@@ -82,37 +108,56 @@ export const Projects = () => {
             {projects.map((project, index) => (
               <div
                 key={index}
-                className={`p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow ${
-                  isDarkMode 
-                    ? 'bg-[#1a1a1a] border border-[#333333]' 
-                    : 'bg-white border border-gray-200'
-                }`}
+                className={`p-6 rounded-lg shadow-sm hover:shadow-md transition-shadow flex flex-col h-full ${isDarkMode
+                  ? 'bg-[#1a1a1a] border border-[#333333]'
+                  : 'bg-white border border-gray-200'
+                  }`}
               >
-                <h4 className={`text-sm font-semibold uppercase mb-2 ${
-                  isDarkMode ? 'text-gray-400' : 'text-gray-500'
-                }`}>
+                <h4 className={`text-sm font-semibold uppercase mb-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-500'
+                  }`}>
                   {project.technologies.join(", ")}
                 </h4>
-                <h3 className={`text-2xl font-bold mb-4 ${
-                  isDarkMode ? 'text-gray-200' : 'text-gray-800'
-                }`}>
-                  {project.title}
-                </h3>
-                <p className={`mb-6 ${
-                  isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                }`}>{project.description}</p>
-                <a
-                  href={project.link}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className={`inline-block px-6 py-2 text-sm font-medium rounded-md transition-colors hover:bg-[#CC785C] hover:text-white ${
-                    isDarkMode 
-                      ? 'bg-white text-black' 
-                      : 'bg-black text-white'
-                  }`}
-                >
-                  View Project
-                </a>
+                <div className="flex items-center gap-3 mb-4">
+                  <h3 className={`text-2xl font-bold ${isDarkMode ? 'text-gray-200' : 'text-gray-800'
+                    }`}>
+                    {project.title}
+                  </h3>
+                  {project.isPrivate && (
+                    <span className={`inline-block px-3 py-1 text-xs font-medium rounded-full ${isDarkMode
+                      ? 'bg-yellow-900 text-yellow-300 border border-yellow-700'
+                      : 'bg-yellow-100 text-yellow-800 border border-yellow-300'
+                      }`}>
+                      Private Repository
+                    </span>
+                  )}
+                </div>
+                <p className={`mb-6 flex-grow ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                  }`}>{project.description}</p>
+                <div className="mt-auto">
+                  {project.isPrivate ? (
+                    <a
+                      href="#contact"
+                      className={`inline-block px-6 py-2 text-sm font-medium rounded-md transition-colors hover:bg-[#CC785C] hover:text-white ${isDarkMode
+                        ? 'bg-white text-black'
+                        : 'bg-black text-white'
+                        }`}
+                    >
+                      Request Access
+                    </a>
+                  ) : (
+                    <a
+                      href={project.link}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className={`inline-block px-6 py-2 text-sm font-medium rounded-md transition-colors hover:bg-[#CC785C] hover:text-white ${isDarkMode
+                        ? 'bg-white text-black'
+                        : 'bg-black text-white'
+                        }`}
+                    >
+                      View Project
+                    </a>
+                  )}
+                </div>
               </div>
             ))}
           </div>
