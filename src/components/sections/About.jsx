@@ -9,10 +9,12 @@ export const About = () => {
     "Python",
     "C++",
     "Java",
+    "Kotlin",
     "C",
     "HTML/CSS",
     "SQL",
     "Typescript",
+    "JavaScript",
     "ARMv7",
     "Verilog",
     "VHDL",
@@ -21,6 +23,7 @@ export const About = () => {
   const toolsAndTechnologies = [
     "Azure DevOps",
     "Google Cloud Platform",
+    "Android Studio",
     "Docker",
     "Kubernetes",
     "Firebase",
@@ -42,6 +45,7 @@ export const About = () => {
     "Node.js",
     "NumPy",
     "Pandas",
+    "Jetpack Compose",
     "Matplotlib",
     "PostgreSQL",
     "REST APIs",
@@ -240,6 +244,20 @@ export const About = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
                 {/* Left Column */}
                 <div className="space-y-6">
+                  <div>
+                  <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
+                      }`}>
+                      Data Analyst Intern – Electricity Markets at Independent Electricity System Operator
+                    </h4>
+                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
+                      }`}>
+                      Starting 09/2025 | Toronto, ON
+                    </p>
+                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
+                      }`}>
+                    </ul>
+                  </div>
+                  
                   {/* AGFA HealthCare */}
                   <div>
                     <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
