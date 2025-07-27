@@ -251,7 +251,7 @@ export const About = () => {
                     </h4>
                     <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
                       }`}>
-                      09/2025 - Present | Toronto, ON
+                      Starting 09/2025 | Toronto, ON
                     </p>
                     <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
                       }`}>
