@@ -31,7 +31,7 @@ export const About = () => {
     "Git",
     "Bash",
     "Grafana",
-    "Tableueu",
+    "Tableau",
     "Jupyter Notebook",
     "Anaconda",
     "Agile",
@@ -253,9 +253,6 @@ export const About = () => {
                       }`}>
                       Starting 09/2025 | Toronto, ON
                     </p>
-                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                      }`}>
-                    </ul>
                   </div>
                   
                   {/* AGFA HealthCare */}
