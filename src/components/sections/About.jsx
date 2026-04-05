@@ -285,17 +285,15 @@ export const About = () => {
                   <div>
                     <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
                       }`}>
-                      Software Developer & Analyst Co-op at Independent Electricity System Operator
+                      Software Developer & Analyst at Independent Electricity System Operator
                     </h4>
-                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
-                      }`}>
+                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                       01/2024 - 04/2024 | Toronto, ON
                     </p>
-                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                      }`}>
-                      <li>• Led development of automated data harvesting pipeline for calculating carbon intensity of electricity imports using Python, Pandas, and Selenium, enhancing data accuracy by 25% and reducing processing time by 70%</li>
-                      <li>• Developed Python tool to streamline extraction of CEC invoices and inventory information, reducing data retrieval time from 2 hours to 5 minutes</li>
-                      <li>• Collaborated with Karbone Inc. and IRD team on Clean Energy Credits project, performing detailed pricing analysis and policy verification to ensure compliance with industry standards</li>
+                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      <li>• Built a Python-based ETL pipeline to calculate electricity import carbon intensity from MISO and NYISO market data, significantly improving data accuracy and processing efficiency; developed a Prophet-based time series model to forecast hourly grid intensity of imports</li>
+                      <li>• Built a Python CLI tool using Pandas to automate querying and exporting of CEC invoice and inventory data, replacing manual CSV filtering and significantly reducing data retrieval time</li>
+                      <li>• Analyzed competing CEC pricing models and evaluated policy frameworks in collaboration with Karbone Inc., providing recommendations to support IESO's clean energy credit market strategy in Ontario</li>
                     </ul>
                   </div>
                 </div>
@@ -304,16 +302,13 @@ export const About = () => {
                 <div className="space-y-6">
                   {/* Ontario Ministry of Health */}
                   <div>
-                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
-                      }`}>
+                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'}`}>
                       Software Developer at Ontario Ministry of Health
                     </h4>
-                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
-                      }`}>
+                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                       09/2022 - 12/2022 | Toronto, ON
                     </p>
-                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                      }`}>
+                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                       <li>• Developed and maintained full-stack TypeScript web application using React, Node.js, and MongoDB, improving UI responsiveness and user experience</li>
                       <li>• Resolved 50+ critical bugs through structured testing, boosting system stability and reliability across the platform</li>
                       <li>• Streamlined deployment processes using Azure DevOps, reducing deployment time by 25% and accelerating feature delivery cycles</li>
@@ -322,16 +317,13 @@ export const About = () => {
 
                   {/* Executive IT Support */}
                   <div>
-                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
-                      }`}>
+                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'}`}>
                       Executive IT Support at Ministry of Public and Business Service Delivery and Procurement
                     </h4>
-                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
-                      }`}>
+                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                       01/2022 - 04/2022 | Toronto, ON
                     </p>
-                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                      }`}>
+                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
                       <li>• Resolved 100+ technical issues across hardware, networking, and system configurations, ensuring uninterrupted operations for internal users</li>
                       <li>• Managed and updated web content to enhance cross-device compatibility and improve accessibility standards for all users</li>
                       <li>• Provided technical support and troubleshooting for various software applications and system integrations</li>
