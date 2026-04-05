@@ -253,14 +253,17 @@ export const About = () => {
                 {/* Left Column */}
                 <div className="space-y-6">
                   <div>
-                  <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
-                      }`}>
-                      Data Analyst Intern – Electricity Markets at Independent Electricity System Operator
+                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'}`}>
+                      Electricity Markets Analyst at Independent Electricity System Operator
                     </h4>
-                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
-                      }`}>
-                      Starting 09/2025 | Toronto, ON
+                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
+                      09/2025 - 12/2025 | Mississauga, ON
                     </p>
+                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      <li>• Debugged end-to-end data pipelines by isolating discrepancies across ingestion, transformation, and output layers, ensuring data integrity for analysis</li>
+                      <li>• Developed Python-based ETL workflows to process and structure large-scale electricity market data, automating recurring extraction and validation tasks to reduce manual overhead</li>
+                      <li>• Performed exploratory data analysis to uncover anomalies and validate system behavior against expected market dynamics</li>
+                    </ul>
                   </div>
                   
                   {/* AGFA HealthCare */}
