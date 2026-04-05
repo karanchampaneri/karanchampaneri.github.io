@@ -268,20 +268,16 @@ export const About = () => {
                   
                   {/* AGFA HealthCare */}
                   <div>
-                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'
-                      }`}>
-                      Performance Engineer Co-op at AGFA HealthCare
+                    <h4 className={`text-lg font-bold mb-1 ${isDarkMode ? 'text-[#f3f4f6]' : 'text-[#191919]'}`}>
+                      Performance Engineer at AGFA HealthCare
                     </h4>
-                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'
-                      }`}>
+                    <p className={`text-sm mb-2 font-medium ${isDarkMode ? 'text-gray-300' : 'text-gray-700'}`}>
                       01/2025 - 04/2025 | Waterloo, ON
                     </p>
-                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'
-                      }`}>
-                      <li>• Provisioned over 10,000 users and 900 external systems into enterprise imaging clusters using automated XML pipelines and Python scripts, improving deployment efficiency by 60%</li>
-                      <li>• Built and maintained OpenSearch/Elasticsearch dashboards in Grafana using Lucene syntax, enabling near real-time tracking of performance metrics across 20+ nodes</li>
-                      <li>• Resolved user activation issues by analyzing database schema and scripting SQL updates with encrypted credentials, reducing post-import defects by 80%</li>
-                      <li>• Automated system updates and Java memory configuration via Jenkins pipelines and VM deployments, cutting manual setup time by 50% and supporting high-load operations</li>
+                    <ul className={`text-sm space-y-2 ${isDarkMode ? 'text-gray-400' : 'text-gray-600'}`}>
+                      <li>• Provisioned 10K+ users and 900 systems into enterprise imaging clusters via automated XML pipelines and Python scripts, resolving account activation issues and improving deployment reliability</li>
+                      <li>• Designed and executed JMeter load tests simulating concurrent clinical workflows, identifying backend latency and memory inefficiencies that reduced dashboard load times by 25%</li>
+                      <li>• Automated CI/CD test workflows and infrastructure configuration using Jenkins pipelines, cutting setup time by 50% and improving build reliability across Kubernetes-based clusters</li>
                     </ul>
                   </div>
 
