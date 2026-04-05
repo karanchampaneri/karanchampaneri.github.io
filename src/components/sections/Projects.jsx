@@ -6,6 +6,37 @@ export const Projects = () => {
 
   const projects = [
     {
+      title: "RideSentinel",
+      description:
+        "RideSentinel is a modular, plug-and-play vehicle safety monitoring system that analyzes driver behavior and improves situational awareness across cars, motorcycles, and bicycles. Built around a Raspberry Pi 5, it aggregates data from stereo dash cameras, a driver-facing camera, accelerometer, and GPS to perform post-trip safety analysis — detecting unsafe following distances, sudden braking, lane deviations, and driver distraction — without relying on expensive sensors like LiDAR or cloud infrastructure.",
+      technologies: [
+        "Raspberry Pi 5",
+        "Python",
+        "TensorFlow Lite",
+        "MediaPipe",
+        "OpenCV",
+        "SQLite",
+        "React Native",
+        "BLE / GATT",
+      ],
+      link: "#",
+      isPrivate: true,
+    },
+    {
+      title: "Bank Customer Churn Prediction",
+      description:
+        "A machine learning classification project benchmarking seven supervised models — Logistic Regression, Decision Tree, Bagging, Random Forest, Gradient Boosting, SVM, and Neural Network — to predict bank customer churn on a 10,000-record dataset. Includes full EDA, class imbalance handling, data leakage detection, and hyperparameter tuning via GridSearchCV with stratified 5-fold cross-validation. Gradient Boosting achieved the highest ROC-AUC (0.874); Neural Network led on recall (0.828).",
+      technologies: [
+        "Python",
+        "Scikit-learn",
+        "Pandas",
+        "NumPy",
+        "Matplotlib",
+        "Jupyter Notebook",
+      ],
+      link: "https://github.com/karanchampaneri/churn-project-mse446",
+    },
+    {
       title: "CareerCompass",
       description:
         "CareerCompass is a comprehensive career development mobile app built with Kotlin and Jetpack Compose for Android. It empowers professionals at all stages to set and track career goals, analyze skill gaps, generate professional resumes and cover letters, and prepare for interviews with AI-powered feedback. The app features a personalized dashboard, secure Firebase authentication, PDF export, voice recording, and automated reminders, all wrapped in a Material Design 3-compliant interface.",
