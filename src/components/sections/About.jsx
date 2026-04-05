@@ -1,5 +1,5 @@
 import { RevealOnScroll } from "../RevealOnScroll";
-import karanImage from "/src/assets/images/karan4.png";
+import karanImage from "/src/assets/images/my-notion-face-transparent.png";
 import { useDarkMode } from "../../contexts/DarkModeContext";
 
 export const About = () => {
@@ -75,11 +75,19 @@ export const About = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-16 items-center mb-16">
             {/* Left Column: Image */}
             <div className="relative flex justify-center">
-              <img
-                src={karanImage}
-                alt="Karan Champaneri"
-                className="rounded-xl w-full max-w-sm object-cover"
-              />
+              <div
+                className="p-2 w-full flex items-center justify-center"
+                style={{
+                  background: isDarkMode ? '#F0F0EB' : 'transparent',
+                  borderRadius: '60% 40% 55% 45% / 50% 45% 55% 50%',
+                }}
+              >
+                <img
+                  src={karanImage}
+                  alt="Karan Champaneri"
+                  className="w-full"
+                />
+              </div>
             </div>
 
             {/* Right Column: Paragraph */}
